@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Raycecil Dupont NG | Application Developer</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #f8f9fa;
+        }
+
+        header {
+            background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+            color: white;
+            padding: 2rem 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        nav {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #3498db;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #3498db;
+        }
+
+        .hero {
+            background: linear-gradient(135deg, #34495e 0%, #2c3e50 100%);
+            color: white;
+            padding: 5rem 2rem;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin: 0 auto;
+            opacity: 0.9;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 4rem 2rem;
+        }
+
+        .section {
+            background: white;
+            margin-bottom: 2rem;
+            padding: 2.5rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+        }
+
+        h2 {
+            color: #2c3e50;
+            margin-bottom: 1.5rem;
+            font-size: 1.8rem;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 0.5rem;
+        }
+
+        .portfolio-grid {
+            display: grid;
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .portfolio-item {
+            background: #f8f9fa;
+            padding: 2rem;
+            border-radius: 8px;
+            border-left: 4px solid #3498db;
+            transition: all 0.3s;
+        }
+
+        .portfolio-item:hover {
+            transform: translateX(5px);
+            box-shadow: 0 4px 12px rgba(52, 152, 219, 0.15);
+        }
+
+        .portfolio-item h3 {
+            color: #2c3e50;
+            margin-bottom: 1rem;
+            font-size: 1.4rem;
+        }
+
+        .portfolio-item p {
+            margin-bottom: 1rem;
+            color: #555;
+        }
+
+        .features {
+            margin-top: 1rem;
+            padding-left: 1.5rem;
+        }
+
+        .features li {
+            margin-bottom: 0.5rem;
+            color: #666;
+        }
+
+        .tech-stack {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-top: 1rem;
+        }
+
+        .tech-badge {
+            background: #3498db;
+            color: white;
+            padding: 0.3rem 0.8rem;
+            border-radius: 15px;
+            font-size: 0.85rem;
+        }
+
+        .about-content {
+            display: grid;
+            gap: 2rem;
+        }
+
+        .about-text {
+            color: #555;
+            font-size: 1.05rem;
+        }
+
+        footer {
+            background: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 2rem;
+            margin-top: 4rem;
+        }
+
+        .contact-info {
+            margin-top: 2rem;
+            padding: 1.5rem;
+            background: #f8f9fa;
+            border-radius: 8px;
+            text-align: center;
+        }
+
+        .contact-info p {
+            font-size: 1.1rem;
+            color: #555;
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .nav-links {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            .container {
+                padding: 2rem 1rem;
+            }
+
+            .section {
+                padding: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">Raycecil Dupont NG</div>
+            <ul class="nav-links">
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h1>Raycecil Dupont NG</h1>
+        <p>Building practical cyber solutions applications that solve real problems - from legal document processing to business mapping and workflow automation</p>
+    </section>
+
+    <div class="container">
+        <section id="portfolio" class="section">
+            <h2>Applications & Projects</h2>
+            
+            <div class="portfolio-grid">
+                <div class="portfolio-item">
+                    <h3>Personal Assistant Solicitor</h3>
+                    <p>An intelligent legal assistant application that bridges the gap between lawyers and clients, providing accessible legal information and case data for specific situations.</p>
+                    <ul class="features">
+                        <li>Helps clients understand legal processes and requirements</li>
+                        <li>Provides case data and precedents relevant to specific situations</li>
+                        <li>Makes legal information more accessible and understandable</li>
+                        <li>Streamlines communication between legal professionals and clients</li>
+                    </ul>
+                    <div class="tech-stack">
+                        <span class="tech-badge">Legal Tech</span>
+                        <span class="tech-badge">Client Interface</span>
+                        <span class="tech-badge">Case Management</span>
+                    </div>
+                </div>
+
+                <div class="portfolio-item">
+                    <h3>Law Firm Document Processor</h3>
+                    <p>A comprehensive workflow management system designed specifically for law firms to handle document processing efficiently and systematically.</p>
+                    <ul class="features">
+                        <li>Automates document intake and organization</li>
+                        <li>Streamlines workflow between different stages of legal processes</li>
+                        <li>Tracks document status and ensures nothing falls through the cracks</li>
+                        <li>Improves efficiency and reduces administrative burden</li>
+                    </ul>
+                    <div class="tech-stack">
+                        <span class="tech-badge">Workflow Automation</span>
+                        <span class="tech-badge">Document Management</span>
+                        <span class="tech-badge">Process Tracking</span>
+                    </div>
+                </div>
+
+                <div class="portfolio-item">
+                    <h3>Jos-Biz-Map</h3>
+                    <p>An interactive business directory and mapping application for Jos, featuring pinned locations of actual businesses with detailed information about each establishment.</p>
+                    <ul class="features">
+                        <li>Visual map interface showing businesses across Jos</li>
+                        <li>Detailed business information including location, services, and contact details</li>
+                        <li>Easy navigation and discovery of local businesses</li>
+                        <li>Helps residents and visitors find what they need quickly</li>
+                    </ul>
+                    <div class="tech-stack">
+                        <span class="tech-badge">Interactive Maps</span>
+                        <span class="tech-badge">Business Directory</span>
+                        <span class="tech-badge">Location Services</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="section">
+            <h2>About Us</h2>
+            <div class="about-content">
+                <p class="about-text">
+                    We develop practical applications that address real-world needs. Our focus is on creating solutions that make processes easier, more efficient, and more accessible to the people who need them.
+                </p>
+                <p class="about-text">
+                    From legal tech applications that help bridge the gap between professionals and clients, to workflow automation that saves time and reduces errors, to mapping solutions that connect communities with local businesses - each project is built with the end user in mind.
+                </p>
+                <p class="about-text">
+                    We believe in building tools that work, are easy to use, and solve actual problems rather than creating complexity for its own sake.
+                </p>
+            </div>
+        </section>
+
+        <section id="contact" class="section">
+            <h2>Get in Touch</h2>
+            <div class="contact-info">
+                <p>Interested in working together or learning more about these projects?</p>
+                <p style="margin-top: 1rem; font-weight: 500;">Feel free to reach out for collaboration or consultation.</p>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Raycecil Dupont NG</p>
+        <p style="margin-top: 0.5rem; font-size: 0.9rem; opacity: 0.8;">Building practical cyber solutions applications that solve real problems</p>
+    </footer>
+</body>
+</html>
