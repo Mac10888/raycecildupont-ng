@@ -21,7 +21,7 @@
         header {
             background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
             color: white;
-            padding: 2rem 0;
+            padding: 1.5rem 0;
             box-shadow: 0 2px 10px rgba(0,0,0,0.1);
         }
 
@@ -34,7 +34,21 @@
             align-items: center;
         }
 
-        .logo {
+        .logo-container {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .logo-img {
+            width: 50px;
+            height: 50px;
+            background: white;
+            padding: 5px;
+            border-radius: 8px;
+        }
+
+        .logo-text {
             font-size: 1.5rem;
             font-weight: bold;
             color: #3498db;
@@ -116,6 +130,22 @@
             box-shadow: 0 4px 12px rgba(52, 152, 219, 0.15);
         }
 
+        .portfolio-item.featured {
+            border-left: 4px solid #f39c12;
+            background: linear-gradient(135deg, #fff9e6 0%, #f8f9fa 100%);
+        }
+
+        .featured-badge {
+            display: inline-block;
+            background: #f39c12;
+            color: white;
+            padding: 0.3rem 0.8rem;
+            border-radius: 15px;
+            font-size: 0.85rem;
+            margin-bottom: 0.5rem;
+            font-weight: bold;
+        }
+
         .portfolio-item h3 {
             color: #2c3e50;
             margin-bottom: 1rem;
@@ -152,6 +182,10 @@
             font-size: 0.85rem;
         }
 
+        .tech-badge.orange {
+            background: #f39c12;
+        }
+
         .about-content {
             display: grid;
             gap: 2rem;
@@ -160,6 +194,20 @@
         .about-text {
             color: #555;
             font-size: 1.05rem;
+        }
+
+        .website-link {
+            display: inline-block;
+            color: #3498db;
+            text-decoration: none;
+            font-weight: 500;
+            margin-top: 0.5rem;
+            transition: color 0.3s;
+        }
+
+        .website-link:hover {
+            color: #2980b9;
+            text-decoration: underline;
         }
 
         footer {
@@ -200,13 +248,26 @@
             .section {
                 padding: 1.5rem;
             }
+
+            .logo-container {
+                flex-direction: column;
+                gap: 0.5rem;
+            }
         }
     </style>
 </head>
 <body>
     <header>
         <nav>
-            <div class="logo">Raycecil Dupont NG</div>
+            <div class="logo-container">
+                <svg class="logo-img" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg">
+                    <!-- Orange part (left vertical bar) -->
+                    <rect x="254" y="453" width="122" height="318" fill="#FFA940"/>
+                    <!-- Blue part (curved R shape) -->
+                    <path d="M 590 365 Q 770 365 770 500 Q 770 600 650 635 L 765 770 L 630 770 L 515 640 Q 413 640 413 640 L 413 500 Q 500 500 590 500 Q 650 500 650 450 Q 650 400 590 400 L 413 400 L 413 253 L 590 253 Q 770 253 770 365 Z" fill="#3B7FC4"/>
+                </svg>
+                <div class="logo-text">Raycecil Dupont NG</div>
+            </div>
             <ul class="nav-links">
                 <li><a href="#portfolio">Portfolio</a></li>
                 <li><a href="#about">About</a></li>
@@ -225,8 +286,28 @@
             <h2>Applications & Projects</h2>
             
             <div class="portfolio-grid">
+                <div class="portfolio-item featured">
+                    <span class="featured-badge">⭐ LIVE PROJECT</span>
+                    <h3>M. N. Dongtoe Law Firm Website</h3>
+                    <p>A comprehensive, professional law firm website delivering multidimensional legal services across traditional and emerging technology sectors.</p>
+                    <ul class="features">
+                        <li>Full-service law firm website with modern, professional design</li>
+                        <li>Showcases expertise in corporate law, cryptocurrency regulations, and cybersecurity</li>
+                        <li>Public-private partnerships and technological legal counsel</li>
+                        <li>Combines legal acumen with technological expertise</li>
+                        <li>Responsive design optimized for all devices</li>
+                    </ul>
+                    <div class="tech-stack">
+                        <span class="tech-badge orange">Professional Web Design</span>
+                        <span class="tech-badge orange">Legal Tech</span>
+                        <span class="tech-badge orange">Corporate Website</span>
+                        <span class="tech-badge orange">SEO Optimized</span>
+                    </div>
+                    <a href="https://mndongtoelaw.com" target="_blank" class="website-link">🌐 Visit mndongtoelaw.com →</a>
+                </div>
+
                 <div class="portfolio-item">
-                    <h3>Personal Assistant</h3>
+                    <h3>P Assistant</h3>
                     <p>An intelligent legal assistant application that bridges the gap between lawyers and clients, providing accessible legal information and case data for specific situations.</p>
                     <ul class="features">
                         <li>Helps clients understand legal processes and requirements</li>
@@ -258,7 +339,7 @@
                 </div>
 
                 <div class="portfolio-item">
-                    <h3>B-Map</h3>
+                    <h3>Map</h3>
                     <p>An interactive business directory and mapping application for Jos, featuring pinned locations of actual businesses with detailed information about each establishment.</p>
                     <ul class="features">
                         <li>Visual map interface showing businesses across Jos</li>
@@ -282,10 +363,10 @@
                     We develop practical applications that address real-world needs. Our focus is on creating solutions that make processes easier, more efficient, and more accessible to the people who need them.
                 </p>
                 <p class="about-text">
-                    From legal tech applications that help bridge the gap between professionals and clients, to workflow automation that saves time and reduces errors, to mapping solutions that connect communities with local businesses - each project is built with the end user in mind.
+                    From legal tech applications that help bridge the gap between professionals and clients, to full-service law firm websites, workflow automation that saves time and reduces errors, to mapping solutions that connect communities with local businesses - each project is built with the end user in mind.
                 </p>
                 <p class="about-text">
-                    We believe in building tools that work, are easy to use, and solve actual problems rather than creating complexity for its own sake.
+                    We believe in building tools that work, are easy to use, and solve actual problems rather than creating complexity for its own sake. Our work spans from traditional corporate solutions to emerging technology sectors including cryptocurrency regulations and cybersecurity counsel.
                 </p>
             </div>
         </section>
